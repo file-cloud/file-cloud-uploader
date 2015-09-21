@@ -37,4 +37,27 @@ describe('file-cloud-uploader node module', function () {
       done();
     });
   });
+
+  it('should be able to make an aws s3 uploading', function (done) {
+    var called = false;
+    var config = {
+      accessKeyId: process.env.AWS_S3_ACCESS_KEY_ID,
+      secretAccessKey: process.env.AWS_S3_ACCESS_KEY_SECRET,
+      endpoint: process.env.AWS_S3_ENDPOINT,
+      Bucket: process.env.AWS_S3_BUCKET,
+      region: process.env.AWS_S3_REGION,
+      progress: function (/*evt*/) {
+        called = true;
+      }
+    };
+
+    var filename = path.resolve(__dirname, 'assets/a.jpg');
+
+    fileCloudUploader('s3', filename, config, function (data) {
+      assert.equal(true, !data.error);
+      assert.equal(true, typeof data.path === 'string');
+      assert.equal(true, validator.isURL(data.url));
+      done();
+    });
+  });
 });

@@ -25,14 +25,18 @@ var aliossUploader = function(filename, next, config) {
 
 module.exports = function(type, filename, config, next) {
   switch(type) {
+    case 'aws':
     case 's3':
       aws3Uploader(filename, next, config);
       break;
+    case 'ali':
     case 'oss':
       aliossUploader(filename, next, config);
       break;
     case 'disk':
       diskUploader(filename, next, config);
       break;
+    default :
+      next(true);
   }
 };
