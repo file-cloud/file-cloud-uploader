@@ -27,9 +27,12 @@ module.exports = function(type, filename, config, next) {
   switch(type) {
     case 's3':
       aws3Uploader(filename, next, config);
+      break;
     case 'oss':
       aliossUploader(filename, next, config);
+      break;
     case 'disk':
       diskUploader(filename, next, config);
+      break;
   }
 };
