@@ -2,7 +2,7 @@
 
 > 用于服务器端的文件哈希服务
 
-使用的文件哈希包[file-hash](https://github.com/file-cloud/file-hash))
+使用的文件哈希包[file-hash](https://github.com/file-cloud/file-hash)
 
 1. 可以用于本地文件的哈希考贝 (采用了[file-cloud-disk-uploader](https://github.com/file-cloud/file-cloud-disk-uploader)) 
 
