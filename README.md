@@ -2,9 +2,11 @@
 
 > 用于服务器端的文件哈希服务
 使用的文件哈希包[file-hash](https://github.com/file-cloud/file-hash)) 
-1.可以用于本地文件的哈希考贝 (采用了[file-cloud-disk-uploader](https://github.com/file-cloud/file-cloud-disk-uploader)) 
-2.可以用于阿里云oss的文件考贝(采用了[file-cloud-alioss-uploader](https://github.com/file-cloud/file-cloud-alioss-uploader)) 
-3.可以用于aws的s3的文件考贝(采用了[file-cloud-aws-uploader](https://github.com/file-cloud/file-cloud-aws-uploader)) 
+1. 可以用于本地文件的哈希考贝 (采用了[file-cloud-disk-uploader](https://github.com/file-cloud/file-cloud-disk-uploader)) 
+
+2. 可以用于阿里云oss的文件考贝(采用了[file-cloud-alioss-uploader](https://github.com/file-cloud/file-cloud-alioss-uploader)) 
+
+3. 可以用于aws的s3的文件考贝(采用了[file-cloud-aws-uploader](https://github.com/file-cloud/file-cloud-aws-uploader)) 
 
 
 
@@ -84,11 +86,6 @@ fileCloudUploader('s3', filename, config, function (data) {
   assert.equal(true, validator.isURL(data.url));
   done();
 });
-```
-
-```sh
-$ npm install --global file-cloud-uploader
-$ file-cloud-uploader --help
 ```
 
 
