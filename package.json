@@ -1,6 +1,6 @@
 {
   "name": "file-cloud-uploader",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Uploader Adapter for all uploaders",
   "author": {
     "name": "calidion",

@@ -6,18 +6,27 @@ var fcaliossu = require('file-cloud-alioss-uploader');
 var diskUploader = function(filename, next, config) {
 
   fcdu(function(error, hashedFile) {
+    if (error) {
+      return next({});
+    }
     next({error: error, path: config.dir + '/' + hashedFile, url: config.base + "/" + hashedFile});
   }, filename, config.dir);
 };
 
 var aws3Uploader = function(filename, next, config) {
   fcaws3u(function(error, hashedFile, data) {
+    if (error) {
+      return next({});
+    }
     next({error: error, path: hashedFile, url: data.Location});
   }, filename, config);
 };
 
 var aliossUploader = function(filename, next, config) {
   fcaliossu(function(error, hashedFile, data) {
+    if (error) {
+      return next({});
+    }
     next({error: error, path: hashedFile, url: data.Location});
   }, filename, config);
 };
