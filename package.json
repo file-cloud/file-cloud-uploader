@@ -1,6 +1,6 @@
 {
   "name": "file-cloud-uploader",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Uploader Adapter for all uploaders",
   "author": {
     "name": "calidion",
@@ -22,9 +22,9 @@
     "cloud"
   ],
   "dependencies": {
-    "file-cloud-alioss-uploader": "0.0.2",
-    "file-cloud-aws-uploader": "0.0.4",
-    "file-cloud-disk-uploader": "0.0.2",
+    "file-cloud-alioss-uploader": "^0.0.3",
+    "file-cloud-aws-uploader": "^0.0.4",
+    "file-cloud-disk-uploader": "^0.0.2",
     "meow": "^3.1.0"
   },
   "devDependencies": {
