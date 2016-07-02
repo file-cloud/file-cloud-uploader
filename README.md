@@ -98,7 +98,7 @@ MIT © [calidion](blog.3gcnbeta.com)
 
 [npm-image]: https://badge.fury.io/js/file-cloud-uploader.svg
 [npm-url]: https://npmjs.org/package/file-cloud-uploader
-[travis-image]: https://travis-ci.org/file-cloud/file-cloud-uploader.svg?branch=master
-[travis-url]: https://travis-ci.org/file-cloud/file-cloud-uploader
-[daviddm-image]: https://david-dm.org/file-cloud/file-cloud-uploader.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/file-cloud/file-cloud-uploader
+[travis-image]: https://travis-ci.org/calidion/file-cloud-uploader.svg?branch=master
+[travis-url]: https://travis-ci.org/calidion/file-cloud-uploader
+[daviddm-image]: https://david-dm.org/calidion/file-cloud-uploader.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/calidion/file-cloud-uploader
