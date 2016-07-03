@@ -1,48 +1,59 @@
 {
   "name": "file-cloud-uploader",
-  "version": "0.0.4",
-  "description": "Uploader Adapter for all uploaders",
+  "version": "0.0.5",
+  "description": "file uploader for cloud services",
+  "homepage": "",
   "author": {
     "name": "calidion",
-    "email": "calidion@gmail.com",
+    "email": "caldiion@gmail.com",
     "url": "blog.3gcnbeta.com"
   },
-  "repository": "file-cloud/file-cloud-uploader",
-  "license": "MIT",
   "files": [
-    "index.js",
-    "cli.js",
-    "lib"
+    "dist"
   ],
+  "main": "dist/index.js",
   "keywords": [
-    "file-cloud-uploader",
-    "uploader",
-    "adapter",
-    "file",
-    "cloud"
+    ""
   ],
-  "dependencies": {
-    "file-cloud-alioss-uploader": "^0.0.3",
-    "file-cloud-aws-uploader": "^0.0.4",
-    "file-cloud-cloudinary-uploader": "0.0.1",
-    "file-cloud-disk-uploader": "^0.0.2",
-    "meow": "^3.1.0"
-  },
   "devDependencies": {
-    "grunt-cli": "^0.1.13",
-    "grunt-contrib-jshint": "^0.11.0",
-    "grunt-contrib-nodeunit": "^0.4.1",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-mocha-cli": "^1.12.0",
-    "jshint-stylish": "^1.0.1",
-    "load-grunt-tasks": "^3.1.0",
-    "time-grunt": "^1.1.0",
-    "validator": "^4.0.6"
+    "babel-core": "^5.5.0",
+    "babel-eslint": "^4.1.8",
+    "del": "^2.0.2",
+    "eslint": "^2.1.0",
+    "eslint-config-xo-space": "^0.13.0",
+    "eslint-plugin-babel": "^3.1.0",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.1.0",
+    "gulp-coveralls": "^0.1.0",
+    "gulp-eslint": "^2.0.0",
+    "gulp-exclude-gitignore": "^1.0.0",
+    "gulp-istanbul": "^0.10.3",
+    "gulp-line-ending-corrector": "^1.0.1",
+    "gulp-mocha": "^2.0.0",
+    "gulp-nsp": "^2.1.0",
+    "gulp-plumber": "^1.0.0",
+    "isparta": "^3.0.3",
+    "validator": "^5.4.0"
   },
-  "scripts": {
-    "test": "grunt"
+  "eslintConfig": {
+    "extends": "xo-space",
+    "env": {
+      "mocha": true
+    }
   },
   "bin": {
-    "file-cloud-uploader": "cli.js"
+    "uploader": "bin/cli.js"
+  },
+  "repository": "calidion/file-cloud-uploader",
+  "scripts": {
+    "prepublish": "gulp prepublish",
+    "test": "gulp"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "file-cloud-alioss-uploader": "0.0.3",
+    "file-cloud-aws-uploader": "0.0.4",
+    "file-cloud-cloudinary-uploader": "0.0.1",
+    "file-cloud-disk-uploader": "0.0.2"
   }
 }

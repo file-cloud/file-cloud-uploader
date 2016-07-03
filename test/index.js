@@ -1,6 +1,6 @@
 'use strict';
 var assert = require('assert');
-var fileCloudUploader = require('../');
+var fileCloudUploader = require('../lib/');
 var path = require('path');
 var fs = require('fs');
 var validator = require('validator');
@@ -46,7 +46,7 @@ describe('file-cloud-uploader node module', function () {
       endpoint: process.env.AWS_S3_ENDPOINT,
       Bucket: process.env.AWS_S3_BUCKET,
       region: process.env.AWS_S3_REGION,
-      progress: function (/*evt*/) {
+      progress: function () {
         called = true;
       }
     };
@@ -63,6 +63,7 @@ describe('file-cloud-uploader node module', function () {
   });
 
   it('should be able to make an cloudinary uploading', function (done) {
+    /* eslint camelcase: ["error", {properties: "never"}] */
     var config = {
       cloud_name: process.env.FCU_CLOUDINARY_NAME,
       api_key: process.env.FCU_CLOUDINARY_API_KEY,
