@@ -90,6 +90,27 @@ fileCloudUploader('s3', filename, config, function (data) {
 });
 ```
 
+####移动上传文件到cloudinary
+
+```js
+var config = {
+  cloud_name: process.env.FCU_CLOUDINARY_NAME,
+  api_key: process.env.FCU_CLOUDINARY_API_KEY,
+  api_secret: process.env.FCU_CLOUDINARY_API_SECRET
+};
+
+var filename = path.resolve(__dirname, 'assets/a.jpg');
+
+fileCloudUploader('cloudinary', filename, config, function (data) {
+  assert.equal(true, !data.error);
+  assert.equal(true, typeof data.path === 'string');
+  assert.equal(true, validator.isURL(data.url));
+  assert.equal(true, validator.isURL(data.secure_url));
+  done();
+});
+```
+
+
 
 ## License
 

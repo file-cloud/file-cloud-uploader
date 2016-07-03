@@ -57,6 +57,25 @@ describe('file-cloud-uploader node module', function () {
       assert.equal(true, !data.error);
       assert.equal(true, typeof data.path === 'string');
       assert.equal(true, validator.isURL(data.url));
+      assert.equal(true, called);
+      done();
+    });
+  });
+
+  it('should be able to make an cloudinary uploading', function (done) {
+    var config = {
+      cloud_name: process.env.FCU_CLOUDINARY_NAME,
+      api_key: process.env.FCU_CLOUDINARY_API_KEY,
+      api_secret: process.env.FCU_CLOUDINARY_API_SECRET
+    };
+
+    var filename = path.resolve(__dirname, 'assets/a.jpg');
+
+    fileCloudUploader('cloudinary', filename, config, function (data) {
+      assert.equal(true, !data.error);
+      assert.equal(true, typeof data.path === 'string');
+      assert.equal(true, validator.isURL(data.url));
+      assert.equal(true, validator.isURL(data.secure_url));
       done();
     });
   });
